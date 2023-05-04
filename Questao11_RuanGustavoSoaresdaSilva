@@ -1,0 +1,27 @@
+package prova_programacao;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+public class Prova_programacao {
+
+    public static void main(String[] args) throws IOException {
+        DataInputStream dado;
+        dado = new DataInputStream(System.in);
+        
+        String s = "";
+        int meses = 30;
+        int dias = 365;
+        int totalIdade = meses * dias;
+        
+        System.out.println("Informe os meses: ");
+        s = dado.readLine();
+        meses = Integer.parseInt(s);
+        
+        System.out.println("Informe os dias: ");
+        s = dado.readLine();
+        dias = Integer.parseInt(s);
+        
+        System.out.println("Sua idade é: " + totalIdade);
+    }
+}
