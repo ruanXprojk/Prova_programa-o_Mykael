@@ -1,0 +1,21 @@
+package prova_programacao;
+import java.io.DataInputStream;
+import java.io.IOException;
+import javax.swing.JOptionPane;
+
+public class NumeroJoption {
+    public static void main(String[] args) throws IOException{
+        DataInputStream dado;
+        dado = new DataInputStream(System.in);
+        
+        int num = 10;
+        int antecessor = num - 1;
+        int sucessor = num + 1;
+        
+        JOptionPane.showInputDialog(null, "Digite o número 10: ");
+        
+        JOptionPane.showMessageDialog(null, "Número selecionado: " + num);
+        JOptionPane.showMessageDialog(null, "Número antecessor: " + antecessor);
+        JOptionPane.showMessageDialog(null, "Número sucessor: " + sucessor);
+    }
+}
