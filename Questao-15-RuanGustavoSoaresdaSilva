@@ -1,0 +1,30 @@
+package prova_programacao;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+public class Algoritmo {
+    public static void main(String[] args) throws IOException{
+        DataInputStream dado;
+        dado = new DataInputStream(System.in);
+        
+        String s = "";
+        
+        float n = 0;
+        float quant = 0;
+        
+        System.out.println("Informe um número: ");
+        s = dado.readLine();
+        n = Float.parseFloat(s);
+        
+        System.out.println("Informe a quantidade: ");
+        s = dado.readLine();
+        quant = Float.parseFloat(s);
+        
+        
+        
+        float media = n * quant / quant;
+        
+        System.out.println("Média: "); System.out.println(media);
+    }
+}
