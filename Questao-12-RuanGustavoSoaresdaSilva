@@ -1,0 +1,57 @@
+package prova_programacao;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+public class VendaCafe {
+    public static void main(String[] args) throws IOException{
+        DataInputStream dado;
+        dado = new DataInputStream(System.in);
+        String s = "";
+        
+        String[] cafes = new String[]{"Café expresso","Café capuccino","Café c/ Leite"};
+        int i = 0;
+        for(i = 0; i < cafes.length; i++){
+            System.out.println("SABORES DISPONIVEIS DE CAFÉ: ");
+            System.out.println(cafes[i]);
+        }
+        
+        Double valorExpress = 0.75;
+        Double valorCapuccino = 1.00;
+        Double valorCafeLeite = 1.25;
+        
+        double quantidadeExpress = 0;
+        double quantidadeCapuccino = 0;
+        double quantidadeCafeLeite = 0;
+        
+        System.out.println("Informe a quantidade de café expresso vendidos: ");
+        s = dado.readLine();
+        quantidadeExpress = Integer.parseInt(s);
+        
+        System.out.println("Informe a quantidade de café capuccino vendidos: ");
+        s = dado.readLine();
+        quantidadeCapuccino = Integer.parseInt(s);
+        
+        System.out.println("Informe a quantidade de café c/ leite vendidos: ");
+        s = dado.readLine();
+        quantidadeCafeLeite = Integer.parseInt(s);
+        
+        String x = "";
+        System.out.println("Digite a letra X: ");
+        x = dado.readLine();
+        
+        double valorTotalExpress = quantidadeExpress * valorExpress;
+        double valorTotalCapuccino = quantidadeCapuccino * valorCapuccino;
+        double valorTotalCafeLeite = quantidadeCafeLeite * valorCafeLeite;
+        
+        System.out.println("Total de vendas");
+        System.out.println("---------------------------------");
+        
+        System.out.println("valor total express: " + valorTotalExpress);
+        System.out.println("\n");
+        System.out.println("valor total capuccino: " + valorTotalCapuccino);
+        System.out.println("\n");
+        System.out.println("valor total café c/ leite: " + valorTotalCafeLeite);
+        
+    }
+}
